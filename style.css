@@ -1,0 +1,10 @@
+html, body {
+    margin: 0;
+}
+
+#map {
+    width: 100%;
+    aspect-ratio: 2 / 1; /* 2:1 is good for a world map (height 0.5 of the width) */
+    background-color: white;
+    /* border: 1px solid black;  /* Border to show div size for adjusting the width & zoom lvl */
+}
