@@ -52,7 +52,20 @@ function fitMapToDivWidth() {
     else if (width < 1500) zoom = 1.9;
     else if (width < 1550) zoom = 1.95;
     else if (width < 1600) zoom = 2.0;
-    else zoom = 2.1;
+    else if (width < 1700) zoom = 2.05;
+    else if (width < 1800) zoom = 2.1;
+    else if (width < 1900) zoom = 2.15;
+    else if (width < 2000) zoom = 2.2;
+    else if (width < 2100) zoom = 2.25;
+    else if (width < 2200) zoom = 2.3;
+    else if (width < 2300) zoom = 2.4;
+    else if (width < 2400) zoom = 2.5;
+    else if (width < 2500) zoom = 2.6;
+    else if (width < 2600) zoom = 2.7;
+    else if (width < 2700) zoom = 2.8;
+    else if (width < 2800) zoom = 2.9;
+    else if (width < 3000) zoom = 3.0;
+    else zoom = 3.2;
   }
 
   console.log(`Map width: ${width}px, Zoom level: ${zoom}, Small map: ${smallSizeMap}`);
@@ -110,7 +123,7 @@ function drawGeoJson(countryValues = {}) {
     });
 }
 
-// e.g. http://127.0.0.1:5500/index.html?id=42
+// e.g. http://127.0.0.1:5500/index.html?id=19 or https://website-url.com?id=19
 const urlParams = new URLSearchParams(window.location.search)
 const campaignId = urlParams.get("id")
 
