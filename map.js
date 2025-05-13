@@ -82,7 +82,7 @@ function getColor(status) {
     case "PROMISED VOTE - UNILATERAL":
     case "PROMISED VOTE - RECIPROCAL":
     case "PROMISED VOTE - ORAL": return "#2ED47A"; // Green
-    default: return "#888888"; // Gray as unknown (other color can used for testing empties)
+    default: return "#888888"; // Gray as unknown / no data (other color can used for testing empties)
   }
 }
 
@@ -110,8 +110,9 @@ function drawGeoJson(countryValues = {}) {
     });
 }
 
-// 
-let campaignId = 19
+// e.g. http://127.0.0.1:5500/index.html?id=42
+const urlParams = new URLSearchParams(window.location.search)
+const campaignId = urlParams.get("id")
 
 // ---------- Fetch API Data & Then Draw Map ----------
 fetch("https://xauy-vmur-zbnk.f2.xano.io/api:OaMJaaNt/map_data", {
